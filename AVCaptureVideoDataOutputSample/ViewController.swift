@@ -13,7 +13,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
 
     
     var session : AVCaptureSession!
-    var inputDevice : AVCaptureDeviceInput!
     
     var imageView : UIImageView!
     
@@ -52,7 +51,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
         let camera = AVCaptureDevice.defaultDevice(withDeviceType: .builtInWideAngleCamera, mediaType: AVMediaTypeVideo, position: .back)
         
-        //        var input : AVCaptureDeviceInput!
+        var inputDevice : AVCaptureDeviceInput!
         do {
             inputDevice = try AVCaptureDeviceInput(device: camera)
         } catch let error as NSError {
